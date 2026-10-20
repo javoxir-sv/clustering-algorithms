@@ -1,6 +1,6 @@
 # Clustering Algorithms
 
-A Jupyter notebook project exploring clustering methods on rental-listing data. It implements K-means and DBSCAN in Python/NumPy, compares them with scikit-learn implementations, and evaluates Agglomerative Clustering and Gaussian Mixture Models. The notebook includes data preparation, cluster visualizations, silhouette scores, and an experiment that adds cluster labels to a Lasso regression model.
+A Jupyter notebook project exploring clustering methods on rental-listing data. Custom K-means and DBSCAN implementations live in `model.py`; the notebook compares them with scikit-learn and evaluates Agglomerative Clustering and Gaussian Mixture Models. It also includes data preparation, cluster visualizations, silhouette scores, and an experiment that adds cluster labels to a Lasso regression model.
 
 This repository is an educational notebook, not an installable Python package or command-line application.
 
@@ -8,14 +8,15 @@ This repository is an educational notebook, not an installable Python package or
 
 | Path | Description |
 | --- | --- |
-| [`cluster.ipynb`](cluster.ipynb) | Main notebook containing the implementations, experiments, visualizations, and comparisons. |
+| [`cluster.ipynb`](cluster.ipynb) | Main notebook containing data preparation, experiments, visualizations, and comparisons. |
+| [`model.py`](model.py) | Custom `myKMeans` and `MyDBSCAN` estimator implementations imported by the notebook. |
 | [`data/data.json`](data/data.json) | Rental-listing dataset used by the notebook. |
 | [`requirements.txt`](requirements.txt) | Python dependencies for running the notebook. |
 
 ## Algorithms and experiments
 
-- **K-means:** A from-scratch implementation and a comparison with scikit-learn's `KMeans`.
-- **DBSCAN:** A from-scratch implementation that uses a KD-tree for neighborhood lookups, compared with scikit-learn's `DBSCAN`.
+- **K-means:** The custom `myKMeans` implementation in `model.py` and a comparison with scikit-learn's `KMeans`.
+- **DBSCAN:** The custom `MyDBSCAN` implementation in `model.py` uses a KD-tree for neighborhood lookups; the notebook compares it with scikit-learn's `DBSCAN`.
 - **Agglomerative Clustering:** Hierarchical clustering using scikit-learn.
 - **Gaussian Mixture Model:** Probabilistic clustering using scikit-learn's `GaussianMixture`.
 - **Evaluation:** Cluster visualizations and silhouette scores, plus a Lasso regression experiment that measures the effect of including cluster labels as a feature.
